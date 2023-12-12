@@ -1,7 +1,6 @@
 package com.developers.kameleoon.restapi.controllers;
 
 import com.developers.kameleoon.restapi.dto.UserDTO;
-import com.developers.kameleoon.restapi.models.Quote;
 import com.developers.kameleoon.restapi.models._User;
 import com.developers.kameleoon.restapi.service.UserService;
 import lombok.AllArgsConstructor;

@@ -1,13 +1,11 @@
 package com.developers.kameleoon.restapi.service;
 
 import com.developers.kameleoon.restapi.dto.UserDTO;
-import com.developers.kameleoon.restapi.models.Quote;
 import com.developers.kameleoon.restapi.models._User;
 import com.developers.kameleoon.restapi.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
