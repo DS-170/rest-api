@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   app:
-    image: rest-api-app:latest
+    image: docker.io/ds170/rest-api-app:latest
     container_name: rest-api-app
     ports:
       - "8080:8080"
