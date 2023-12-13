@@ -1,7 +1,7 @@
 package com.developers.kameleoon.restapi.service;
 
 import com.developers.kameleoon.restapi.dto.UserDTO;
-import com.developers.kameleoon.restapi.models._User;
+import com.developers.kameleoon.restapi.models.User;
 import com.developers.kameleoon.restapi.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,10 +14,10 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-    public _User create(UserDTO dto) {
+    public User create(UserDTO dto) {
         Date currentDate = new Date();
 
-        _User user = _User.builder()
+        User user = User.builder()
                 .name(dto.getName())
                 .email(dto.getEmail())
                 .password(dto.getPassword())
@@ -26,16 +26,16 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public List<_User> readAll() {
+    public List<User> readAll() {
         return userRepository.findAll();
     }
 
-    public _User readById(Long id) {
+    public User readById(Long id) {
         return userRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("User not found - ID: " + id));
     }
 
-//    public _User update(_User user) {
+//    public User update(User user) {
 //        return userRepository.save(user);
 //    }
 

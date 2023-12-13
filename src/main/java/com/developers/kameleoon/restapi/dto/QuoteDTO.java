@@ -10,5 +10,5 @@ public class QuoteDTO {
     private String content;
     private Date creationDate;
     private int votes;
-    private Long authorId;
+    private Long author;
 }

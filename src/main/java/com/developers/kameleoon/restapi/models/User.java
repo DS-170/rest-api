@@ -9,28 +9,28 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "QUOTES")
-public class Quote implements Serializable {
+@Entity
+@Table(name = "USERS")
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "content", nullable = false)
-    private String content;
+    @Column(name = "name", unique = true, nullable = false)
+    private String name;
+
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "creation_date")
     private Date creationDate;
-
-    @Column(name = "votes")
-    private int votes;
-
-    @ManyToOne
-    @JoinColumn(name = "author", nullable = false)
-    private User author;
 }
+

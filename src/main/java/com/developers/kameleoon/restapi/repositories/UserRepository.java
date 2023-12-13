@@ -1,9 +1,7 @@
 package com.developers.kameleoon.restapi.repositories;
 
-import com.developers.kameleoon.restapi.models._User;
+import com.developers.kameleoon.restapi.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<_User, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 }
