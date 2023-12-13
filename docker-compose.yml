@@ -1,0 +1,7 @@
+version: '2.1'
+services:
+  app:
+    image: rest-api-app:latest
+    container_name: rest-api-app
+    ports:
+      - "8080:8080"
