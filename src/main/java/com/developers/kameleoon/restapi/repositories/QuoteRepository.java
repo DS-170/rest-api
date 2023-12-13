@@ -32,6 +32,4 @@ public interface QuoteRepository extends JpaRepository<Quote, Long> {
     @Transactional
     @Query(value = "UPDATE QUOTES SET votes = votes - 1 WHERE id = :id", nativeQuery = true)
     void decrementVotesById(@Param("id") Long id);
-
-//    List<Quote> findByAuthorId(User author);
 }

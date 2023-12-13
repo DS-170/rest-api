@@ -4,7 +4,6 @@ import com.developers.kameleoon.restapi.dto.QuoteDTO;
 import com.developers.kameleoon.restapi.models.Quote;
 import com.developers.kameleoon.restapi.service.QuoteService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -67,8 +67,4 @@ public class QuoteService {
     public List<Quote> readWorseTen() {
         return quoteRepository.readWorseTenVotes();
     }
-
-//    public List<Quote> readByAuthorId(_User user) {
-//        return quoteRepository.findByAuthorId(user);
-//    }
 }
