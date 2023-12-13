@@ -17,18 +17,18 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<User> create(@RequestBody UserDTO dto) {
-        return new ResponseEntity<>(userService.create(dto), HttpStatus.OK);
+    public User create(@RequestBody UserDTO dto) {
+        return userService.create(dto);
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> readAll() {
-        return new ResponseEntity<>(userService.readAll(), HttpStatus.OK);
+    public List<User> readAll() {
+        return userService.readAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> readById(@PathVariable Long id) {
-        return new ResponseEntity<>(userService.readById(id), HttpStatus.OK);
+    public User readById(@PathVariable Long id) {
+        return userService.readById(id);
     }
 
 //    @PutMapping
